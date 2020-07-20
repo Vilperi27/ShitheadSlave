@@ -1,5 +1,5 @@
-discord.py
-Pillow
 opencv-python
 opencv-contrib-python
+discord.py
+Pillow
 numpy
