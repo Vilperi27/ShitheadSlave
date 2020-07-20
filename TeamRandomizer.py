@@ -36,19 +36,6 @@ async def team(ctx, *args):
 
     query = " ".join(args)
 
-    if("tuomas" in query or "Tuomas" in query):
-        ran = random.randint(0, 4)
-
-        switcher = {
-            0: "\nTuomas on homo",
-            1: "\nTuomaksella on pieni muna",
-            2: "\nTuomas tykkää rempasta",
-            3: "\nTuomas on tyhmä :--D",
-            4: "\nTuomaksen suussa on rempan muna xDDXDDXD"
-        }
-
-        finalmessage = switcher.get(ran)
-
     if("--f" in query):
         query = query.replace(" --f", "")
         query = query.replace("--f ", "")
@@ -75,7 +62,7 @@ async def team(ctx, *args):
     t1 = t1.replace("'", "")
     t2 = t2.replace("'", "")
 
-    await ctx.send(f'Team 1: {t1}\nTeam 2: {t2}{finalmessage}')
+    await ctx.send(f'Team 1: {t1}\nTeam 2: {t2}')
 
 
 @client.command()
