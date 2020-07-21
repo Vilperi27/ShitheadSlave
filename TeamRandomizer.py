@@ -2,9 +2,9 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import bot
 import random
+import requests
 from io import BytesIO
-import cv2
-from PIL import Image
+from PIL import Image, ImageDraw
 
 client = commands.Bot(command_prefix='!')
 
@@ -36,19 +36,6 @@ async def team(ctx, *args):
 
     query = " ".join(args)
 
-    if("tuomas" in query or "Tuomas" in query):
-        ran = random.randint(0, 4)
-
-        switcher = {
-            0: "\nTuomas on homo",
-            1: "\nTuomaksella on pieni muna",
-            2: "\nTuomas tykkää rempasta",
-            3: "\nTuomas on tyhmä :--D",
-            4: "\nTuomaksen suussa on rempan muna xDDXDDXD"
-        }
-
-        finalmessage = switcher.get(ran)
-
     if("--f" in query):
         query = query.replace(" --f", "")
         query = query.replace("--f ", "")
@@ -75,7 +62,7 @@ async def team(ctx, *args):
     t1 = t1.replace("'", "")
     t2 = t2.replace("'", "")
 
-    await ctx.send(f'Team 1: {t1}\nTeam 2: {t2}{finalmessage}')
+    await ctx.send(f'Team 1: {t1}\nTeam 2: {t2}')
 
 
 @client.command()
@@ -89,7 +76,6 @@ async def ub(ctx):
 @client.command()
 async def pubg(ctx, map):
     try:
-        image = cv2.imread(map + '.jpg')
 
         circle_x_limit = 0
         circle_y_limit = 0
@@ -110,8 +96,11 @@ async def pubg(ctx, map):
             circle_x_limit = random.randint(210, 830)
             circle_y_limit = random.randint(165, 810)
         
-        cv2.circle(image,(circle_x_limit, circle_y_limit), 40, (0,255,0), 3)
-        cv2.imwrite("map.jpg", image)
+        image = Image.open(map + '.jpg')
+
+        draw = ImageDraw.Draw(image)
+        draw.ellipse((circle_x_limit, circle_y_limit, circle_x_limit + 80, circle_y_limit + 80), width = 5, outline = (0, 255, 0, 255))
+        image.save('map.jpg')
 
         await ctx.send(file=discord.File('map.jpg'))
 
