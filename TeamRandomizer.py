@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import bot
 import random
-import requests
 from io import BytesIO
 from PIL import Image, ImageDraw
 
