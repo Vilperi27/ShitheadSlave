@@ -56,17 +56,26 @@ async def team(ctx, *args):
         else:
             team_two.append(player)
 
-    t1 = str(team_one).strip("[]")
-    t2 = str(team_two).strip("[]")
-    t1 = t1.replace("'", "")
-    t2 = t2.replace("'", "")
+    t1 = str(team_one).strip("[]").replace("'", "")
+    t2 = str(team_two).strip("[]").replace("'", "")
 
     await ctx.send(f'Team 1: {t1}\nTeam 2: {t2}')
 
 
 @client.command()
-async def csgo(ctx, *args):
-    await ctx.send('Under construction')
+async def csgo(ctx, side):
+
+    f=open("CSGOstratroulette.txt", "r")
+    contents = f.readlines()
+
+    if(side.lower() == "t"):
+        await ctx.send(contents[random.randint(0,96)])
+
+    elif(side.lower() == "ct"):
+        await ctx.send(contents[random.randint(98,180)])
+
+    else:
+        await ctx.send('How do you not manage to write t or ct???')
 
 @client.command()
 async def ub(ctx):
@@ -106,4 +115,5 @@ async def pubg(ctx, map):
     except:
         await ctx.send(f'Learn to write correctly. (Erangel, Miramar, Vikendi, Sanhok, Karakin)')
 
-client.run('NzM0MzcyNTgzMTA5MDMzOTg1.XxU-ZQ.U0U3YAMvgsU3i45MP0OKDsMtdEk')
+client.run('NzM0MzcyNTgzMTA5MDMzOTg1.XxU-ZQ.U0U3YAMvgsU3i45MP0OKDsMtdEk')   #Official Shitheads Slave
+#client.run('NzM0NDcwMTg2NTg4OTYyODc3.XxaCow.x6WIuJlx6lyxefPaioYoInoydtc')   #Test Environment
