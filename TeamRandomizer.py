@@ -3,8 +3,7 @@ from discord.ext import commands
 from discord.ext.commands import bot
 import random
 from io import BytesIO
-import cv2
-from PIL import Image
+from PIL import Image, ImageDraw
 
 client = commands.Bot(command_prefix='!')
 
@@ -57,17 +56,26 @@ async def team(ctx, *args):
         else:
             team_two.append(player)
 
-    t1 = str(team_one).strip("[]")
-    t2 = str(team_two).strip("[]")
-    t1 = t1.replace("'", "")
-    t2 = t2.replace("'", "")
+    t1 = str(team_one).strip("[]").replace("'", "")
+    t2 = str(team_two).strip("[]").replace("'", "")
 
     await ctx.send(f'Team 1: {t1}\nTeam 2: {t2}')
 
 
 @client.command()
-async def csgo(ctx, *args):
-    await ctx.send('Under construction')
+async def csgo(ctx, side):
+
+    f=open("CSGOstratroulette.txt", "r")
+    contents = f.readlines()
+
+    if(side.lower() == "t"):
+        await ctx.send(contents[random.randint(0,96)])
+
+    elif(side.lower() == "ct"):
+        await ctx.send(contents[random.randint(98,180)])
+
+    else:
+        await ctx.send('How do you not manage to write t or ct???')
 
 @client.command()
 async def ub(ctx):
@@ -76,7 +84,6 @@ async def ub(ctx):
 @client.command()
 async def pubg(ctx, map):
     try:
-        image = cv2.imread(map + '.jpg')
 
         circle_x_limit = 0
         circle_y_limit = 0
@@ -97,12 +104,16 @@ async def pubg(ctx, map):
             circle_x_limit = random.randint(210, 830)
             circle_y_limit = random.randint(165, 810)
         
-        cv2.circle(image,(circle_x_limit, circle_y_limit), 40, (0,255,0), 3)
-        cv2.imwrite("map.jpg", image)
+        image = Image.open(map + '.jpg')
+
+        draw = ImageDraw.Draw(image)
+        draw.ellipse((circle_x_limit, circle_y_limit, circle_x_limit + 80, circle_y_limit + 80), width = 5, outline = (0, 255, 0, 255))
+        image.save('map.jpg')
 
         await ctx.send(file=discord.File('map.jpg'))
 
     except:
         await ctx.send(f'Learn to write correctly. (Erangel, Miramar, Vikendi, Sanhok, Karakin)')
 
-client.run('NzM0MzcyNTgzMTA5MDMzOTg1.XxU-ZQ.U0U3YAMvgsU3i45MP0OKDsMtdEk')
+client.run('NzM0MzcyNTgzMTA5MDMzOTg1.XxU-ZQ.U0U3YAMvgsU3i45MP0OKDsMtdEk')   #Official Shitheads Slave
+#client.run('NzM0NDcwMTg2NTg4OTYyODc3.XxaCow.x6WIuJlx6lyxefPaioYoInoydtc')   #Test Environment

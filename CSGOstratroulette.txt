@@ -1,0 +1,181 @@
+Jump jump: Constantly jump the whole round and when in a gun fight you have to start singing the song Jump until you kill the enemy or get killed you dont sing you can only buy a pistol and zeus next round.
+Praise the Knife: Upon coming across an intersection, pull out your knife and left click. If your knife swings left, go left, and if your knife swings right, go right.
+Selective Shooting: At the start of the round, each player must state two enemy players. If you kill either of the stated enemy players, you must stop moving or shooting for the rest of the round.
+Use your utilities: You must hit a player with both your pistol and primary weapon before killing the. Order doesn't matter. If you fail, you must stop moving and shooting. This strat cannot be done on pistol rounds.
+One-Taps Only: You may only fire one shot at a time. If you miss, you must drop or reload your weapon. You can pick it back up, but the same rules still apply.
+Take it Slow: You can only use Scouts and AWPs. Bind ALT as zoom and F4 as shoot.
+AOL Messenger: No mics! You have to write in chat when you and where you spot and enemy and when you kill, plant, etc.
+Robin Hood: The richest player on the team must buy weapons for his teammates (as many as he can), and he must also give away his weapon he used in the previous round, the only weapons the buyer can use are pick-ups from killed enemies.
+Freestyle: Whenever you die, you have to freestyle rap about how you died and say callouts by rapping.
+One of Everything: Thanks to gun control your team can only use 1 shotgun, 1 pistol, 1 sniper rifle, 1 assault rifle, 1 knife and 1 grenade. The player with the most assists determines a weapon for every player but have to use the knife (+grenade) for himself.
+One Man's Trash: Every player buys his most hated gun and gives it to a teammate.
+Is That a Tornado?: When all of your teammates have been killed, they must continuously blow into their microphones as the remaining man tries to win the round.
+Golden Gun: When the first person on your team gets a kill, everyone else must throw away their weapons and share the weapon that the first kill was made with (the golden gun).
+Numbers Game: Your number is based on the scoreboard. You may buy from any category, but only the number slot that you are on the board (i.e. bottom board buys from the 5th slot).
+Compulsive Hoarders: Whenever you kill an enemy, stop what you are doing, pick up their dropped weapon and create a pile in your own spawn. Bonus points for getting dead teammates' weapons too.
+Day at the Range: Everyone buy a shotgun and yell 'PULL!!!' whenever you fire at an enemy.
+Super detailed Callouts: Whenever you see an enemy you must tell your teammates their height, estimated age, what they're wearing, which skin they have and shoe size etc.
+Spawn Camp: No one gets to leave spawn.
+Simon says: One person is Simon, the others have to follow and be killed uppon failure.
+Gladiator: Only one person may leave spawn. When that person dies, the next person leaves.
+Backwards headset: 180 your headset.
+Spawn Camp: No one gets to leave spawn.
+Soviet Tactics: One person buys a gun and everyone else follows him and picks up the gun when he dies.
+Zeus + Knives only: Everyone buys a Zeus and a Zeus only!
+Believe: 5 deagles - go Juan or go home!
+One in the Chamber: Buy 1 deagle, pass it to a teammate after 1 shot.
+Leapfrog Sites: Plant at one site, only after passing through the other.
+Peekaboo: Peek an enemy awper one by one with pistols only.
+Behind you!: You can only use the S key to move around.
+Juan Deag(le): Deagles only! If you get a body shot, you have to follow up with a knife.
+cl_righthand 0: Switch hands for your mouse and keyboard.
+Gunswap: Every time you kill an enemy, you must pick up the weapon he drops (including pistols) and use it for your next kill.
+Crouch Only: Crouch only. Type '+duck' in console, and '-duck' after. If someone stands up, the others must kill him.
+Shotguns Only: Shotguns only.
+Not One Step Back!: Only going forward is allowed, no sidestepping or going backwards.
+420% Skillshot: Jumpshots only.
+Napoleonic Warfare: 5-man scout firing squad in mid, all lined up.
+Deagle Distraction: 5 x deagle + 5 x decoy. Ultimate confusion with 10 deagles shooting at the same time.
+FaZe's Clan's Strat: Only sniper noscopes allowed. Must HLDJ an airhorn sound after kill.
+Grand Prix!: Pick any strat and perform it twice in the same round. Loop if you have to.
+Veritas and Aequitas: 4 members split into 2 pairs, buys Duelies and Kevlar, and takes a different site. Last one (Il Duce) buys Duelies and Sawed Off/Nova has to clutch.
+Lone Survivor: Nade yourselves/shoot each other until you're all 20 HP or less, then proceed the round as usual. Last man alive gives their best Mark Wahlberg/Boston impression as they narrate their every move.
+Am I Being Detained?: Use teamwork and tactical grenades to prevent enemy pushes while you try to incapacitate your enemies with the Zeus taser. Any teammate that fires a gun other than the Zeus is indefinitely suspended (kicked) without pay or referred to as Darren Wilson for the remainder of the game.
+Is That You, John Wayne?: One member volunteers to motivate the rest of the team in his best Gunny impersonation. If your drill sergeant is alive at the end of the round, another teammate (preferably the one with the lowest amount of kills, Pvt Pyle) has to kill him.
+Neymar Jr: Your team plays a normal round, but any player hit by enemy damage performs a soccer flop the second they are hit, and must stay in position and defend themselves until the end of the round. If you are killed after flopping, promptly plead your case to the nearby referee to card the offender by accusing the enemy player of being a hacker in chat.
+Brasil, Decime Que Se Siente (AKA 7–1): If your team wins the first pistol round of the game, you must intentionally allow the enemy (German) team to win the next 7 rounds. 'huehueheauhuha' spam is not necessary but improves the experience.
+30 Round Assault Clips: Gun control laws have reduced the amount of rounds you can carry in your weapon thanks to anti-gun rallies sponsored by your local Starbucks. Each teammate must buy an AK/M4 and dump their ammo at the beginning of the round until they only have one magazine left (can't reload). Sorry, M4A1-S fanboys.
+MIN KUK AR SA HAARD: You channel the luck of all YouTube CS:GO knife opening videos to equip your team for victory. All members of the team must use a CS:GO weapons crate simulator before the round and use the weapon they unbox. You sure you want that knife?
+Uncle Richie Jr: Say it with your chest! Your team can only go for body shots (try to aim for the chest). Teammates that get kills with headshots (intentionally or otherwise) can't buy next round.
+Rage Against the Machine: Equip your whole team with machine guns (m249/para or negev). Teammates cannot stop to fire and must keep moving while shooting.
+Mom, Get The Camera!: For one round, bind your screenshot key to your LMB button and fire whenever you normally would. For bonus points, compile these images into a GIF, WEBM or YouTube video.
+Corey and Trevor: The two bottom players on the scoreboard become Corey and Trevor, who can only buy smokes and body armor. Their job is to charge into sites or follow your top fragger (Ricky) and protect him from dying.
+Max Pain: Duel Berettas only!
+CS:CoD: Scoped weapons only!
+Dance Dance Revolution: Camp at spawn and show off your favorite moves.
+It's Time To Say Goodbye: All buy negev, armor, and rush together while holding mouse_1.
+Reverse Cowgirl: One player always has to be on top of another player, looking in opposite directions.
+Crickets: Use Glock/Famas and stack in spawn. When the enemies come around, everyone throws a smoke and starts toggling the firing mode repeatedly. Keep refreshing smoke.
+Grenade Frenzy: Every round you have to buy a molotov/incendiary grenade and a HE grenade before anything else. If you die before using them both, in the next round you can only use shotguns and starting pistol.
+Social Distancing: No two operators are allowed in the same room at the same time and stay at least 1,5 meter apart from each other.
+Earn your armor: Win a round, if the team loses the round they can't buy armor in the next round
+The Michael Jackson: Your team must (moon)walk backwards. You can only start walking normal again after a teammate gets killed!
+Crabwalk: Everyone buys Duel Berettas and crouch rushes any site.
+Hot Potato: You can't have the bomb in your inventory for more than 5 seconds; you must throw it to someone else before time's up.
+Mr.President (VIP): One of the terrorists is a president and he can only hold the bomb out and try to plant. The other T's have to protect the president by bodyguarding or with other ways.
+Headless Chicken: When low on cash, buy a kevlar'd teammate a weak SMG. Flash him into a site and have your chicken run in spraying in all directions. Abandon him or follow.
+Round the World (and Back Again): Run up to A site. As soon as you get a kill, turn around and the whole team rushes back to B. Rinse and repeat until a clear bombsite is reached or all CTs are eliminated.
+Blitzkrieg: 5 x tec-9's or p90's, 5 x 2 flashes, Take over any bombsite with all 10 flashes because if you're blind, they're blind.
+Miami Vice: Reenact a shitty 80's action movie. The whole team buys Mac-10s and Tec-9s and rushes somewhere.
+Jihadi John: One of your teammates volunteers to be Jihadi John, whose sole purpose is to behead infidels. One member of your team must play a Nasheed through in-game voice through the entire round for morale. All four members must protect Jihadi John in his mission, and he must survive the round with at least 70% HP.
+UK RUSH: Rush a choke point one by one.
+ThePro90Freak: 5 man. P90 only.
+The Rattlesnake: Travel around in a group around the map. Wield the Glock and hold down right mouse button switching between single- and burst-fire.
+Allahu Akbar: Try to plant the bomb using only grenades. Only after planting the bomb may you switch to your weapon of choice.
+Quick Push: You must wait until the timer is at 0:15 before entering a bombsite.
+(Never) Go Full Rambo: Buy as many negevs/M249's and HE grenades and rush site. People who can't afford it can only use knives.
+Role Reversal: Give the bomb to CTs, rotate back around the entire map dodging CT rotates and 'retake' the bomb.
+G-Unit: Buy mac10s and do a 'drive-by' at preferred bombsite while singing 50 Cent songs.
+The Na'Vi: You can't stop moving or shift walk. You can't take a site until there is only 25 seconds remaining.
+Nose Goes: Gather in front of a site, everyone types 'Nose Goes' and everyone charges in reverse order.
+Emphascema: 5 smokes. Move team to somewhat near a site. Smoke an area, then smoke just past the previous one. Repeat until you have a tunnel to the bombsite.
+Marked for Death: One person runs ahead and finds someone. The four others nade stack that person and finish it up with a tec-9 rush. When the target is down, the person awarded with the kill must teabag them until the round is won or the bomb is planted.
+The Clean Plant: Drop the bomb at spawn, go to any site as a team, when the site is clear you may go to spawn, get the bomb, go back, and plant.
+Ace: Every time you encounter an intersection, draw an arrow on the ground with bullets to where you are heading. The whole team must stay together.
+Firing Squad: Everyone buys Scouts/AWPs and shoots only when the team captain says 'Fire!'
+Googly Eyes: The four non-bomb carriers must pair up and go to different sites while always facing their partners.
+Postplant Positions: Once the bomb is planted, nobody can move.
+Sod Off!: Everyone must buy a Sawed Off. When you get a kill, you must type 'Sod Off' in chat.
+One Man Entrance: one person must enter a site at a time. Once that person dies the next person can go.
+Hit and Run: Take a bombsite, and after you take it, go back to your spawn before continuing.
+Leeroy Jenkins: Everyone lines up outside of your preferred site/hostage. Once there, everybody must shout LEEROY JENKINS as loud as possible as they storm the bombsite.
+Be A Leader: Only the player with the bomb can move. You can pass the bomb to another player.
+Dizzy Bomb: Once the bomb is planted, everyone must type '+right' in console.
+The Shia Labeouf: 4 players rush into one bombsite while the 5th is behind giving inspirational speech.
+The Floor is Lava v2.0: The person with the bomb must not touch the ground by jumping on the heads of teammates. When you jump on a teammates head he/she cannot move until the bomb carrier has jumped off onto a different teammate. If you fall to the ground you must all run back to the respawn and start again.
+Russian B Rush - CYKA BLYAT!: Hold W, no stopping.
+TEC9 POWA: Rush Middle B to A with no nades and smokes, but only with the Tec9.
+
+Jump jump: Constantly jump the whole round and when in a gun fight you have to start singing the song Jump until you kill the enemy or get killed you dont sing you can only buy a pistol and zeus next round.
+Praise the Knife: Upon coming across an intersection, pull out your knife and left click. If your knife swings left, go left, and if your knife swings right, go right.
+Selective Shooting: At the start of the round, each player must state two enemy players. If you kill either of the stated enemy players, you must stop moving or shooting for the rest of the round.
+Use your utilities: You must hit a player with both your pistol and primary weapon before killing the. Order doesn't matter. If you fail, you must stop moving and shooting. This strat cannot be done on pistol rounds.
+One-Taps Only: You may only fire one shot at a time. If you miss, you must drop or reload your weapon. You can pick it back up, but the same rules still apply.
+Take it Slow: You can only use Scouts and AWPs. Bind ALT as zoom and F4 as shoot.
+AOL Messenger: No mics! You have to write in chat when you and where you spot and enemy and when you kill, plant, etc.
+Robin Hood: The richest player on the team must buy weapons for his teammates (as many as he can), and he must also give away his weapon he used in the previous round, the only weapons the buyer can use are pick-ups from killed enemies.
+Freestyle: Whenever you die, you have to freestyle rap about how you died and say callouts by rapping.
+One of Everything: Thanks to gun control your team can only use 1 shotgun, 1 pistol, 1 sniper rifle, 1 assault rifle, 1 knife and 1 grenade. The player with the most assists determines a weapon for every player but have to use the knife (+grenade) for himself.
+One Man's Trash: Every player buys his most hated gun and gives it to a teammate.
+Is That a Tornado?: When all of your teammates have been killed, they must continuously blow into their microphones as the remaining man tries to win the round.
+Golden Gun: When the first person on your team gets a kill, everyone else must throw away their weapons and share the weapon that the first kill was made with (the golden gun).
+Numbers Game: Your number is based on the scoreboard. You may buy from any category, but only the number slot that you are on the board (i.e. bottom board buys from the 5th slot).
+Compulsive Hoarders: Whenever you kill an enemy, stop what you are doing, pick up their dropped weapon and create a pile in your own spawn. Bonus points for getting dead teammates' weapons too.
+Day at the Range: Everyone buy a shotgun and yell 'PULL!!!' whenever you fire at an enemy.
+Super detailed Callouts: Whenever you see an enemy you must tell your teammates their height, estimated age, what they're wearing, which skin they have and shoe size etc.
+Spawn Camp: No one gets to leave spawn.
+Simon says: One person is Simon, the others have to follow and be killed uppon failure.
+Gladiator: Only one person may leave spawn. When that person dies, the next person leaves.
+Backwards headset: 180 your headset.
+Spawn Camp: No one gets to leave spawn.
+Soviet Tactics: One person buys a gun and everyone else follows him and picks up the gun when he dies.
+Zeus + Knives only: Everyone buys a Zeus and a Zeus only!
+Believe: 5 deagles - go Juan or go home!
+One in the Chamber: Buy 1 deagle, pass it to a teammate after 1 shot.
+Leapfrog Sites: Plant at one site, only after passing through the other.
+Peekaboo: Peek an enemy awper one by one with pistols only.
+Behind you!: You can only use the S key to move around.
+Juan Deag(le): Deagles only! If you get a body shot, you have to follow up with a knife.
+cl_righthand 0: Switch hands for your mouse and keyboard.
+Gunswap: Every time you kill an enemy, you must pick up the weapon he drops (including pistols) and use it for your next kill.
+Crouch Only: Crouch only. Type '+duck' in console, and '-duck' after. If someone stands up, the others must kill him.
+Shotguns Only: Shotguns only.
+Not One Step Back!: Only going forward is allowed, no sidestepping or going backwards.
+420% Skillshot: Jumpshots only.
+Napoleonic Warfare: 5-man scout firing squad in mid, all lined up.
+Deagle Distraction: 5 x deagle + 5 x decoy. Ultimate confusion with 10 deagles shooting at the same time.
+FaZe's Clan's Strat: Only sniper noscopes allowed. Must HLDJ an airhorn sound after kill.
+Grand Prix!: Pick any strat and perform it twice in the same round. Loop if you have to.
+Veritas and Aequitas: 4 members split into 2 pairs, buys Duelies and Kevlar, and takes a different site. Last one (Il Duce) buys Duelies and Sawed Off/Nova has to clutch.
+Lone Survivor: Nade yourselves/shoot each other until you're all 20 HP or less, then proceed the round as usual. Last man alive gives their best Mark Wahlberg/Boston impression as they narrate their every move.
+Am I Being Detained?: Use teamwork and tactical grenades to prevent enemy pushes while you try to incapacitate your enemies with the Zeus taser. Any teammate that fires a gun other than the Zeus is indefinitely suspended (kicked) without pay or referred to as Darren Wilson for the remainder of the game.
+Is That You, John Wayne?: One member volunteers to motivate the rest of the team in his best Gunny impersonation. If your drill sergeant is alive at the end of the round, another teammate (preferably the one with the lowest amount of kills, Pvt Pyle) has to kill him.
+Neymar Jr: Your team plays a normal round, but any player hit by enemy damage performs a soccer flop the second they are hit, and must stay in position and defend themselves until the end of the round. If you are killed after flopping, promptly plead your case to the nearby referee to card the offender by accusing the enemy player of being a hacker in chat.
+Brasil, Decime Que Se Siente (AKA 7–1): If your team wins the first pistol round of the game, you must intentionally allow the enemy (German) team to win the next 7 rounds. 'huehueheauhuha' spam is not necessary but improves the experience.
+30 Round Assault Clips: Gun control laws have reduced the amount of rounds you can carry in your weapon thanks to anti-gun rallies sponsored by your local Starbucks. Each teammate must buy an AK/M4 and dump their ammo at the beginning of the round until they only have one magazine left (can't reload). Sorry, M4A1-S fanboys.
+MIN KUK AR SA HAARD: You channel the luck of all YouTube CS:GO knife opening videos to equip your team for victory. All members of the team must use a CS:GO weapons crate simulator before the round and use the weapon they unbox. You sure you want that knife?
+Uncle Richie Jr: Say it with your chest! Your team can only go for body shots (try to aim for the chest). Teammates that get kills with headshots (intentionally or otherwise) can't buy next round.
+Rage Against the Machine: Equip your whole team with machine guns (m249/para or negev). Teammates cannot stop to fire and must keep moving while shooting.
+Mom, Get The Camera!: For one round, bind your screenshot key to your LMB button and fire whenever you normally would. For bonus points, compile these images into a GIF, WEBM or YouTube video.
+Corey and Trevor: The two bottom players on the scoreboard become Corey and Trevor, who can only buy smokes and body armor. Their job is to charge into sites or follow your top fragger (Ricky) and protect him from dying.
+Max Pain: Duel Berettas only!
+CS:CoD: Scoped weapons only!
+Dance Dance Revolution: Camp at spawn and show off your favorite moves.
+It's Time To Say Goodbye: All buy negev, armor, and rush together while holding mouse_1.
+Reverse Cowgirl: One player always has to be on top of another player, looking in opposite directions.
+Crickets: Use Glock/Famas and stack in spawn. When the enemies come around, everyone throws a smoke and starts toggling the firing mode repeatedly. Keep refreshing smoke.
+Grenade Frenzy: Every round you have to buy a molotov/incendiary grenade and a HE grenade before anything else. If you die before using them both, in the next round you can only use shotguns and starting pistol.
+Social Distancing: No two operators are allowed in the same room at the same time and stay at least 1,5 meter apart from each other.
+Earn your armor: Win a round, if the team loses the round they can't buy armor in the next round
+The Michael Jackson: Your team must (moon)walk backwards. You can only start walking normal again after a teammate gets killed!
+Ninja Defuse Only: Everyone tries to ninja defuse.
+Twin Towers: 2 x two-man towers anywhere, last man has to rush or ninja defuse.
+Miami Vice: Reenact a shitty 80's action movie. You're the sunglasses-wearing badass cop. Only Novas and Deagles for you.
+Smoke Party: Stack one site and hide in the same smoke. Try to ninja defuse when the bomb is planted.
+Quick Push: If the bomb is planted, you must wait till 15 seconds before detonation before pushing.
+The Bee Hive: 1) Everyone buys a gun with a high rate of fire (P90, mac10, mp9) and hides in a portion of the map the enemy team is unlikely to go to, but close to the sites/hostages. 2) Spam BZZZZZZ into the chat over and over. 3) Hostage has been taken! 4) Bumrush the enemy team like a swarm of bees and fire as a group. 5) Get mowed down and lose 90% of the time.
+CS:GHOST: Using nothing but a USP-S, smoke and 2 flashes, make it to T spawn and attack the site T's are pushing.
+BOT Marvin Retake: Every CT must buy a smoke, a decoy and a classic bot weaponry like auto-shotty and SMGs, and camp in spawn until the bomb is planted, then throw ALL smokes and decoys all over the bombsite, and retake the site from different directions. Go for a ninja if possible while other teammates are creating havoc.
+Defusers are for Losers: You can't buy defusekit, nor can you defuse the bomb. No rescuing hostages. Elimination is the only way out!
+Bison Herd: Everyone has to buy bizons without kevlar and shiftwalk. Running or standing still is not allowed.
+Retakes Only: Wait in spawn until the bomb is planted, then begin the round.
+Suck my unit: 1 person buys an M249, everyone else, the M4 A4 and the team splits up, with one person going by themselves. That person isn't allowed to look at the mini-map.
+Scumbag Artillery: All buy HE grenade and camp base. Bombard the first enemy that comes by.
+Splinter Cell: Use only silenced weapons/knives. Don't run.
+KQLY-Style: You can only kill people with a USP-S while jumping.
+Pew Pew: Only use USP-S and bind mouse_1 to say 'pew pew' in chat in addition to firing.
+Operation Widow Fire!: Mag-7's only!
+Summer of Five-Seven: Your whole squad was listening to Bryan Adams before you got to the site. Five-Sevens only. Every time you get a kill, you must type 'Summer of Five-Seven' in chat. If your team somehow wins the round, everyone must type 'Those were the best days of my life' in the chat.
+Tom Clancy's Rainbow Five: Buy Armor, Flashbangs, Smokes, Decoys, Zeus', Defuse Kits, and silenced weapons. If you do not have the m4a1-s or usp-s equipped then you have to knife. Always walk or crouch-walk. Put your mic to eye level (if you have a headset) and whisper to your teammates. If they cannot hear you then tough luck. Door and window breaches must be done by at least three people, one to open, one to nade, and a third to support rifle. By the end of the round you have to have used al
+American Action Movie: Everybody buys MP9s and whenever you have to shoot someone you have to leap in a direction and shoot midair. Especially when going around corners.
+Negev 4 win: Pick a site and pile up in a corner with Negevs. If the T's pick your site, defend it as best you can. If they pick the other site, you must push together and you are not allowed to hold anything else than a Negev.
