@@ -1,0 +1,144 @@
+{
+  "status": "success",
+  "data": {
+    "id": 35072067,
+    "creationTime": "2020-07-23T12:52:53.1422373Z",
+    "version": "10.14.1",
+    "title": "AFK",
+    "champion": {
+      "name": "Yorick",
+      "image": "https://ddragon.leagueoflegends.com/cdn/10.14.1/img/champion/Yorick.png",
+      "spell": {
+        "image": "https://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/YorickE.png",
+        "key": "E",
+        "name": "Mourning Mist"
+      },
+      "key": "Yorick"
+    },
+    "items": {
+      "Mercurys Treads": "https://ddragon.leagueoflegends.com/cdn/10.14.1/img/item/3111.png",
+      "Archangels Staff": "https://ddragon.leagueoflegends.com/cdn/10.14.1/img/item/3003.png",
+      "Zekes Convergence": "https://ddragon.leagueoflegends.com/cdn/10.14.1/img/item/3050.png",
+      "Twin Shadows": "https://ddragon.leagueoflegends.com/cdn/10.14.1/img/item/3905.png",
+      "Redemption": "https://ddragon.leagueoflegends.com/cdn/10.14.1/img/item/3107.png",
+      "Frozen Heart": "https://ddragon.leagueoflegends.com/cdn/10.14.1/img/item/3110.png"
+    },
+    "summonerSpells": {
+      "Barrier": "https://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerBarrier.png",
+      "Cleanse": "https://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerBoost.png"
+    },
+    "runes": {
+      "primary": {
+        "Glacial Augment": "8351.png",
+        "Magical Footwear": "8304.png",
+        "Minion Dematerializer": "8316.png",
+        "Approach Velocity": "8410.png"
+      },
+      "primaryStyle": "inspiration",
+      "secondary": {
+        "Last Stand": "8299.png",
+        "Presence of Mind": "8009.png"
+      },
+      "secondaryStyle": "precision",
+      "stats": [
+        {
+          "image": "5005.png",
+          "description": "Attack Speed (9% Attack Speed)"
+        },
+        {
+          "image": "5003.png",
+          "description": "Magic Resist (6 MR)"
+        },
+        {
+          "image": "5003.png",
+          "description": "Magic Resist (6 MR)"
+        }
+      ]
+    },
+    "totalCost": 13750,
+    "role": "Bot",
+    "itemSet": {
+      "title": "Ultimate Bravery - Yorick - 7/23/2020",
+      "associatedMaps": [
+        11
+      ],
+      "associatedChampions": [
+        83
+      ],
+      "priority": "None",
+      "sortRank": "None",
+      "blocks": [
+        {
+          "type": "Starting Items",
+          "recMath": "None",
+          "minSummonerLevel": "None",
+          "maxSummonerLevel": "None",
+          "showIfSummonerSpell": "None",
+          "hideIfSummonerSpell": "None",
+          "items": [
+            {
+              "id": "1001",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "Early Items",
+          "recMath": "None",
+          "minSummonerLevel": "None",
+          "maxSummonerLevel": "None",
+          "showIfSummonerSpell": "None",
+          "hideIfSummonerSpell": "None",
+          "items": [
+            {
+              "id": "3111",
+              "count": 1
+            },
+            {
+              "id": "3003",
+              "count": 1
+            },
+            {
+              "id": "3050",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "Full Item Build",
+          "recMath": "None",
+          "minSummonerLevel": "None",
+          "maxSummonerLevel": "None",
+          "showIfSummonerSpell": "None",
+          "hideIfSummonerSpell": "None",
+          "items": [
+            {
+              "id": "3111",
+              "count": 1
+            },
+            {
+              "id": "3003",
+              "count": 1
+            },
+            {
+              "id": "3050",
+              "count": 1
+            },
+            {
+              "id": "3905",
+              "count": 1
+            },
+            {
+              "id": "3107",
+              "count": 1
+            },
+            {
+              "id": "3110",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -3,7 +3,12 @@ from discord.ext import commands
 from discord.ext.commands import bot
 import random
 from io import BytesIO
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
+import time
+import os.path
+from os import path
+
+import requests
 
 client = commands.Bot(command_prefix='!')
 
@@ -77,9 +82,136 @@ async def csgo(ctx, side):
     else:
         await ctx.send('How do you not manage to write t or ct???')
 
+def get_picture(json_partition, prefix):
+    imgholder = json_partition
+    imgholderstr = imgholder.split(prefix, 1)[1]
+    
+    if(path.exists('Graphics/' + imgholderstr)):
+        return Image.open('Graphics/' + imgholderstr)
+    else:
+        var = Image.open(BytesIO(requests.get(imgholder).content))
+        var.save('Graphics/' + imgholderstr)
+        return var
+
+
 @client.command()
-async def ub(ctx):
-    await ctx.send('Under construction')
+async def ub(ctx, map, *args):
+
+    
+    users = args
+    user_amount = len(args)
+
+    image_build = Image.new('RGB', ((450, 200*(user_amount))))
+    
+    mapid = 11
+
+    if(map=='-sr'):
+        mapid = 11
+    elif(map == '-a'):
+        mapid = 12
+
+    for x in range(user_amount):
+        r = requests.post('https://api.ultimate-bravery.net/bo/api/ultimate-bravery/v1/dataset', json = {"map":mapid,"level":30,"language":"en","roles":[0,1,2,3,4],"champions":[266,103,84,12,32,34,1,523,22,136,268,432,53,63,201,51,164,69,31,42,122,131,119,36,245,60,28,81,9,114,105,3,41,86,150,79,104,120,74,420,39,427,40,59,24,126,202,222,145,429,43,30,38,55,10,141,85,121,203,240,96,7,64,89,127,236,117,99,54,90,57,11,21,62,82,25,267,75,111,518,76,56,20,2,61,516,80,78,555,246,133,497,33,421,58,107,92,68,13,113,235,875,35,98,102,27,14,15,72,37,16,50,517,134,223,163,91,44,17,412,18,48,23,4,29,77,6,110,67,45,161,254,112,8,106,19,498,101,5,157,83,350,154,238,115,26,142,143]}, headers = {'Content-type':'application/json'})
+        ubdata = r.json()
+
+        
+        image_build.paste(Image.open('Graphics/background.png'), (0, x * 200))
+        title = ""
+        champion_name = None
+        ability = None
+        spell_one = None
+        spell_two = None
+        rune_set_one = set()
+        rune_set_two = set()
+        stats = set()
+        pad = 20
+        
+        title = ubdata['data']['title']
+
+        champion_name = get_picture(ubdata['data']['champion']['image'], 'champion/')
+
+        ability = get_picture(ubdata['data']['champion']['spell']['image'], 'spell/')
+
+        champion_name.thumbnail((60, 60), Image.ANTIALIAS)
+        image_build.paste(champion_name, (5, x * 200 + 5))
+
+        ability.thumbnail((60, 60), Image.ANTIALIAS)
+        image_build.paste(ability, (380, x * 200 + 70))
+
+        draw = ImageDraw.Draw(image_build)
+        font = ImageFont.truetype('arial.ttf', 20)
+        draw.text((80, x * 200 + 25), '{0}, The {1}'.format(users[x], title), font=font)
+
+        count = 0
+
+        for key in ubdata['data']['summonerSpells']:
+            value = ubdata['data']['summonerSpells'][key]
+
+            if(count == 0):
+                spell_one = get_picture(value, 'spell/')
+                spell_one.thumbnail((30, 30), Image.ANTIALIAS)
+                image_build.paste(spell_one, (380, x * 200 + 40))
+            else:
+                spell_two = ability = get_picture(value, 'spell/')
+                spell_two.thumbnail((30, 30), Image.ANTIALIAS)
+                image_build.paste(spell_two, (410, x * 200 + 40))
+            
+            count = 1
+
+        count = 0
+
+        for key in ubdata['data']['items']:
+            value = ubdata['data']['items'][key]
+            item_picture = get_picture(value, 'item/')
+            item_picture.thumbnail((60, 60), Image.ANTIALIAS)
+            image_build.paste(item_picture, (5 + (count * 60), x * 200 + 70))
+            count = count + 1
+
+        count = 0
+
+        for key in ubdata['data']['runes']['primary']:
+            value = ubdata['data']['runes']['primary'][key]
+
+            item_picture = get_picture('https://ultimate-bravery.net/images/runes/' + value, 'runes/')
+            item_picture.thumbnail((30, 30), Image.ANTIALIAS)
+            if(count == 0):
+                image_build.paste(item_picture, (5, x * 200 + 135))
+            else:
+                image_build.paste(item_picture, (5 * count + (count * 30), x * 200 + 135))
+
+            count = count + 1
+
+        count = 0
+        
+        for key in ubdata['data']['runes']['secondary']:
+            value = ubdata['data']['runes']['secondary'][key]
+            item_picture = get_picture('https://ultimate-bravery.net/images/runes/' + value, 'runes/')
+            item_picture.thumbnail((30, 30), Image.ANTIALIAS)
+            if(count == 0):
+                image_build.paste(item_picture, (5, x * 200 + 165))
+            else:
+                image_build.paste(item_picture, (5 * count + (count * 30), x * 200 + 165))
+
+            count = count + 1
+
+        for key in ubdata['data']['runes']['stats']:
+            item_picture = get_picture('https://ultimate-bravery.net/images/rune-stats/' + key['image'], 'rune-stats/')
+            item_picture.thumbnail((30, 30), Image.ANTIALIAS)
+
+            if(count == 0):
+                image_build.paste(item_picture, (5, x * 200 + 165))
+            else:
+                image_build.paste(item_picture, (5 * count + (count * 30), x * 200 + 165))
+
+            count = count + 1
+
+
+        image_build.save('datasetbuild.png')
+        image_build.close()
+
+    await ctx.send(file=discord.File('datasetbuild.png'))
+
+
 
 @client.command()
 async def pubg(ctx, map):
@@ -116,4 +248,3 @@ async def pubg(ctx, map):
         await ctx.send(f'Learn to write correctly. (Erangel, Miramar, Vikendi, Sanhok, Karakin)')
 
 client.run('NzM0MzcyNTgzMTA5MDMzOTg1.XxU-ZQ.U0U3YAMvgsU3i45MP0OKDsMtdEk')   #Official Shitheads Slave
-#client.run('NzM0NDcwMTg2NTg4OTYyODc3.XxaCow.x6WIuJlx6lyxefPaioYoInoydtc')   #Test Environment
