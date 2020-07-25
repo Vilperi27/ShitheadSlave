@@ -114,7 +114,6 @@ def is_empty(any_structure):
 @client.command()
 async def ub(ctx, map, *args):
 
-    
     if(is_empty(args)):
         user_amount = 1
         author = str(ctx.message.author).split('#',1)[0]
@@ -237,7 +236,6 @@ async def ub(ctx, map, *args):
     
     image_build.close()
 
-    print(user_amount)
     if(user_amount % 2 == 0):
         await ctx.send(f'Team 1: {t1}\nTeam 2: {t2}')
 
