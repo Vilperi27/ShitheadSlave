@@ -207,8 +207,8 @@ async def ub(ctx, map, *args):
 
 
         image_build.save('datasetbuild.png')
-        image_build.close()
 
+    image_build.close()
     await ctx.send(file=discord.File('datasetbuild.png'))
 
 
