@@ -34,8 +34,6 @@ async def shhelp(ctx):
 
 @client.command()
 async def team(ctx, *args):
-    team_one = []
-    team_two = []
     force = False
 
     query = " ".join(args)
@@ -145,10 +143,6 @@ async def ub(ctx, map, *args):
         ability = None
         spell_one = None
         spell_two = None
-        rune_set_one = set()
-        rune_set_two = set()
-        stats = set()
-        pad = 20
         
         title = ubdata['data']['title']
 
