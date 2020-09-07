@@ -37,10 +37,14 @@ async def chnick(ctx):
 
     if(changed_names == False):
         for member in ctx.guild.members:
+            print(member)
+
             try:
                 await member.edit(nick='The Elf ' + noun_list[random.randint(0, len(noun_list))].title())               
             except:
-                continue
+                #await ctx.send(str(member) + " couldn't been renamed")
+                pass
+
     changed_names = True
 
 @client.command(pass_context = True)
