@@ -40,8 +40,7 @@ async def chnick(ctx):
             try:
                 await member.edit(nick='The Elf ' + noun_list[random.randint(0, len(noun_list))].title())               
             except:
-                pass
-
+                continue
     changed_names = True
 
 @client.command(pass_context = True)
