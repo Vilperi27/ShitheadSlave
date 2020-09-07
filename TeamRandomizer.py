@@ -12,9 +12,37 @@ import requests
 
 client = commands.Bot(command_prefix='!')
 
+changed_names = False
+
+nl = open('nounlist.txt')
+noun_list = []
+
+for line in nl:
+    sl = line.strip()
+    noun_list.append(sl)
+
 @client.event
 async def on_ready():
     print('Bot ready')
+
+@client.event
+async def on_member_join(member):
+    name = noun_list[random.randint(0, len(noun_list))]
+    await ctx.send('Welcome! The Elf ' + name.title() + '!')
+    await member.edit(nick='The Elf ' + name.title())
+
+@client.command(pass_context=True)
+async def chnick(ctx):
+    global changed_names
+
+    if(changed_names == False):
+        for member in ctx.guild.members:
+            try:
+                await member.edit(nick='The Elf ' + noun_list[random.randint(0, len(noun_list))].title())               
+            except:
+                pass
+
+    changed_names = True
 
 @client.command(pass_context = True)
 async def shhelp(ctx):
