@@ -12,8 +12,6 @@ import requests
 
 client = commands.Bot(command_prefix='!')
 
-changed_names = False
-
 nl = open('nounlist.txt')
 noun_list = []
 
@@ -32,20 +30,18 @@ async def on_member_join(member):
     await member.edit(nick='The Elf ' + name.title())
 
 @client.command(pass_context=True)
-async def chnick(ctx):
-    global changed_names
+@commands.has_role('Royal')
+async def rollnames(ctx):
 
-    if(changed_names == False):
-        for member in ctx.guild.members:
-            print(member)
+    for member in ctx.guild.members:
+        try:
+            await member.edit(nick='The Elf ' + noun_list[random.randint(0, len(noun_list))].title())               
+        except:
+            pass
 
-            try:
-                await member.edit(nick='The Elf ' + noun_list[random.randint(0, len(noun_list))].title())               
-            except:
-                #await ctx.send(str(member) + " couldn't been renamed")
-                pass
-
-    changed_names = True
+@client.command(pass_context=True)
+async def reroll(ctx):
+    await ctx.author.edit(nick='The Elf ' + noun_list[random.randint(0, len(noun_list))].title()) 
 
 @client.command(pass_context = True)
 async def shhelp(ctx):
