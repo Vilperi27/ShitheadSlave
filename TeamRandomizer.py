@@ -7,6 +7,7 @@ from PIL import Image, ImageDraw, ImageFont
 import time
 import os.path
 from os import path
+from discord.utils import find
 
 import requests
 
@@ -25,9 +26,12 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
+
     name = noun_list[random.randint(0, len(noun_list))]
-    await ctx.send('Welcome! The Elf ' + name.title() + '!')
-    await member.edit(nick='The Elf ' + name.title())
+    general = find(lambda x: x.name == 'yleinen',  discord.Guild.text_channels)
+    if general and general.permissions_for(discord.Guild.me).send_messages:
+        await general.send('Welcome! The Elf ' + name.title() + '!')
+        await member.edit(nick='The Elf ' + name.title())
 
 @client.command(pass_context=True)
 @commands.has_role('Royal')
@@ -160,7 +164,7 @@ async def ub(ctx, map, *args):
         mapid = 12
     
     for x in range(user_amount):
-        r = requests.post('https://api.ultimate-bravery.net/bo/api/ultimate-bravery/v1/dataset', json = {"map":mapid,"level":30,"language":"en","roles":[0,1,2,3,4],"champions":[266,103,84,12,32,34,1,523,22,136,268,432,53,63,201,51,164,69,31,42,122,131,119,36,245,60,28,81,9,114,105,3,41,86,150,79,104,120,74,420,39,427,40,59,24,126,202,222,145,429,43,30,38,55,10,141,85,121,203,240,96,7,64,89,127,236,117,99,54,90,57,11,21,62,82,25,267,75,111,518,76,56,20,2,61,516,80,78,555,246,133,497,33,421,58,107,92,68,13,113,235,875,35,98,102,27,14,15,72,37,16,50,517,134,223,163,91,44,17,412,18,48,23,4,29,77,6,110,67,45,161,254,112,8,106,19,498,101,5,157,83,350,154,238,115,26,142,143]}, headers = {'Content-type':'application/json'})
+        r = requests.post('https://api2.ultimate-bravery.net/bo/api/ultimate-bravery/v1/dataset', json = {"map":mapid,"level":30,"language":"en","roles":[0,1,2,3,4],"champions":[266,103,84,12,32,34,1,523,22,136,268,432,53,63,201,51,164,69,31,42,122,131,119,36,245,60,28,81,9,114,105,3,41,86,150,79,104,120,74,420,39,427,40,59,24,126,202,222,145,429,43,30,38,55,10,141,85,121,203,240,96,7,64,89,127,236,117,99,54,90,57,11,21,62,82,25,267,75,111,518,76,56,20,2,61,516,80,78,555,246,133,497,33,421,58,107,92,68,13,113,235,875,35,98,102,27,14,15,72,37,16,50,517,134,223,163,91,44,17,412,18,48,23,4,29,77,6,110,67,45,161,254,112,8,106,19,498,101,5,157,83,350,154,238,115,26,142,143]}, headers = {'Content-type':'application/json'})
         ubdata = r.json()
 
         
