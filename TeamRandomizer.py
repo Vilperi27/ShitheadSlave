@@ -15,6 +15,8 @@ client = commands.Bot(command_prefix='!')
 
 nl = open('nounlist.txt')
 noun_list = []
+apikey = "ASHOJK5OF9U2"
+lmt = 1
 
 for line in nl:
     sl = line.strip()
@@ -138,6 +140,13 @@ def is_empty(any_structure):
         return False
     else:
         return True
+
+@client.command()
+async def gif(ctx, *gifarg):
+    r = requests.get("https://api.tenor.com/v1/random?q=%s&key=%s&limit=%s" % (gifarg, apikey, lmt))
+    gifdata = r.json()
+    print(gifdata['results'][0]['url'])
+    await ctx.send(gifdata['results'][0]['url'])
 
 
 @client.command()
