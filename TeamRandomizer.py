@@ -8,6 +8,7 @@ import time
 import os.path
 from os import path
 from discord.utils import find
+import aiohttp
 
 import requests
 
@@ -147,6 +148,26 @@ async def gif(ctx, *gifarg):
     gifdata = r.json()
     print(gifdata['results'][0]['url'])
     await ctx.send(gifdata['results'][0]['url'])
+
+@client.command()
+async def cat(ctx):
+
+    fact_url = "https://cat-fact.herokuapp.com/facts/random"
+    cat_api_url = "https://api.thecatapi.com/v1/images/search"
+
+    fact_data = requests.get(fact_url)
+    fact_cleaned = fact_data.json()
+    fact = fact_cleaned['text']
+
+    cat_data = requests.get(cat_api_url)
+    cleaned_cat = cat_data.json()
+
+
+    im = Image.open(BytesIO(requests.get(cleaned_cat[0]['url']).content))
+    im.save('cat_image.png')
+    
+    await ctx.send(file=discord.File('cat_image.png'))
+    await ctx.send(f'{fact}')
 
 
 @client.command()
@@ -309,4 +330,3 @@ async def pubg(ctx, map):
     except:
         await ctx.send(f'Learn to write correctly. (Erangel, Miramar, Vikendi, Sanhok, Karakin)')
 
-client.run('NzM0MzcyNTgzMTA5MDMzOTg1.XxU-ZQ.U0U3YAMvgsU3i45MP0OKDsMtdEk')   #Official Shitheads Slave
