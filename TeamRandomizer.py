@@ -1,16 +1,23 @@
-import discord
+from PIL import Image, ImageDraw, ImageFont
+from datetime import datetime
 from discord.ext import commands
 from discord.ext.commands import bot
-import random
-from io import BytesIO
-from PIL import Image, ImageDraw, ImageFont
-import time
-import os.path
-from os import path
 from discord.utils import find
-import aiohttp
-
+from io import BytesIO
+from os import path
+from time import time
+from turtle import pu
+import discord
+import matplotlib as mpl
+import matplotlib.dates, matplotlib.axes
+import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
+import numpy as np
+import osrs_item_ids
+import osrs_boss_ids
+import random
 import requests
+import local_secrets
 
 client = commands.Bot(command_prefix='!')
 
@@ -27,15 +34,6 @@ for line in nl:
 async def on_ready():
     print('Bot ready')
 
-@client.event
-async def on_member_join(member):
-
-    name = noun_list[random.randint(0, len(noun_list))]
-    general = find(lambda x: x.name == 'yleinen',  discord.Guild.text_channels)
-    if general and general.permissions_for(discord.Guild.me).send_messages:
-        await general.send('Welcome! The Elf ' + name.title() + '!')
-        await member.edit(nick='The Elf ' + name.title())
-
 @client.command(pass_context=True)
 @commands.has_role('Royal')
 async def rollnames(ctx):
@@ -47,8 +45,16 @@ async def rollnames(ctx):
             pass
 
 @client.command(pass_context=True)
-async def reroll(ctx):
-    await ctx.author.edit(nick='The Elf ' + noun_list[random.randint(0, len(noun_list))].title()) 
+async def reroll(ctx, *args):
+    if not args:
+        await ctx.author.edit(nick='The Elf ' + noun_list[random.randint(0, len(noun_list))].title())
+    else:
+        await ctx.author.edit(nick='The Elf ' + noun_list[random.randint(0, len(noun_list))].title())
+
+@client.command(pass_context=True)
+async def chnick(ctx, member: discord.Member, *,nick):
+    await member.edit(nick=nick)
+    await ctx.send(f'Nickname was changed for {member.mention} ')
 
 @client.command(pass_context = True)
 async def shhelp(ctx):
@@ -75,7 +81,6 @@ async def team(ctx, *args):
     if("--f" in query):
         query = query.replace(" --f", "")
         query = query.replace("--f ", "")
-        print(query)
         force = True
 
     people = query.split(" ")
@@ -95,8 +100,7 @@ def randomize_team(people):
     team_one = []
     team_two = []
 
-    for n in range(20):
-        random.shuffle(people)
+    random.shuffle(people)
     
     for player in people:
         if(people.index(player) % 2 == 0):
@@ -146,7 +150,6 @@ def is_empty(any_structure):
 async def gif(ctx, *gifarg):
     r = requests.get("https://api.tenor.com/v1/random?q=%s&key=%s&limit=%s" % (gifarg, apikey, lmt))
     gifdata = r.json()
-    print(gifdata['results'][0]['url'])
     await ctx.send(gifdata['results'][0]['url'])
 
 @client.command()
@@ -194,9 +197,8 @@ async def ub(ctx, map, *args):
         mapid = 12
     
     for x in range(user_amount):
-        r = requests.post('https://api2.ultimate-bravery.net/bo/api/ultimate-bravery/v1/dataset', json = {"map":mapid,"level":30,"language":"en","roles":[0,1,2,3,4],"champions":[266,103,84,12,32,34,1,523,22,136,268,432,53,63,201,51,164,69,31,42,122,131,119,36,245,60,28,81,9,114,105,3,41,86,150,79,104,120,74,420,39,427,40,59,24,126,202,222,145,429,43,30,38,55,10,141,85,121,203,240,96,7,64,89,127,236,117,99,54,90,57,11,21,62,82,25,267,75,111,518,76,56,20,2,61,516,80,78,555,246,133,497,33,421,58,107,92,68,13,113,235,875,35,98,102,27,14,15,72,37,16,50,517,134,223,163,91,44,17,412,18,48,23,4,29,77,6,110,67,45,161,254,112,8,106,19,498,101,5,157,83,350,154,238,115,26,142,143]}, headers = {'Content-type':'application/json'})
+        r = requests.post('https://api2.ultimate-bravery.net/bo/api/ultimate-bravery/v1/classic/dataset', json = {"map":mapid,"level":30,"language":"en","roles":[0,1,2,3,4],"champions":[266,103,84,12,32,34,1,523,22,136,268,432,53,63,201,51,164,69,31,42,122,131,119,36,245,60,28,81,9,114,105,3,41,86,150,79,104,120,74,420,39,427,40,59,24,126,202,222,145,429,43,30,38,55,10,141,85,121,203,240,96,7,64,89,127,236,117,99,54,90,57,11,21,62,82,25,267,75,111,518,76,56,20,2,61,516,80,78,555,246,133,497,33,421,58,107,92,68,13,113,235,875,35,98,102,27,14,15,72,37,16,50,517,134,223,163,91,44,17,412,18,48,23,4,29,77,6,110,67,45,161,254,112,8,106,19,498,101,5,157,83,350,154,238,115,26,142,143]}, headers = {'Content-type':'application/json'})
         ubdata = r.json()
-
         
         image_build.paste(Image.open('Graphics/background.png'), (0, x * 200))
         title = ""
@@ -295,7 +297,6 @@ async def ub(ctx, map, *args):
         await ctx.send(f'Team 1: {t1}\nTeam 2: {t2}')
 
 
-
 @client.command()
 async def pubg(ctx, map):
     try:
@@ -330,3 +331,47 @@ async def pubg(ctx, map):
     except:
         await ctx.send(f'Learn to write correctly. (Erangel, Miramar, Vikendi, Sanhok, Karakin)')
 
+
+@client.command()
+async def price(ctx, *args):
+    user_agent = {'User-agent': 'item-price-checker'}
+    fig, ax1 = plt.subplots(1, 1)
+    item_name = [item_name_piece for item_name_piece in args]
+    item_name_display = " ".join(item_name)
+    item_id = osrs_item_ids.get_item_by_name(item_name_display)
+    
+    item_data_latest = requests.get(f"http://prices.runescape.wiki/api/v1/osrs/latest?id={item_id}", headers=user_agent).json()
+    item_data_24h = requests.get(f"http://prices.runescape.wiki/api/v1/osrs/timeseries?timestep=1h&id={item_id}", headers=user_agent).json()
+    
+    timestamps = [datetime.fromtimestamp(x["timestamp"]) for x in item_data_24h["data"]]
+    prices_high = [x["avgHighPrice"] for x in item_data_24h["data"]]
+    prices_low = [x["avgLowPrice"] for x in item_data_24h["data"]]
+    timestamps = timestamps[-24:]
+    prices_high = prices_high[-24:]
+    prices_low = prices_low[-24:]
+
+    #ticks_loc = ax1.get_yticks().tolist()
+    #ax1.yaxis.set_major_locator(mticker.FixedLocator(ticks_loc))
+    #ax1.set_yticklabels([f'{x:,}' for x in ticks_loc])
+    plt.title(f'{item_name_display}')
+    ax1.plot_date(timestamps, prices_high, linestyle="-", label="High", color="#ffa333")
+    ax1.plot_date(timestamps, prices_low, linestyle="-", label="Low", color="#33ff5f")
+    ax1.annotate(f'{prices_high[-1]:,}', xy=(timestamps[-1], prices_high[-1]))
+    ax1.annotate(f'{prices_low[-1]:,}', xy=(timestamps[-1], prices_low[-1]))
+    ax1.legend()
+    fig.tight_layout()
+    plt.show()
+    
+    item_price_high = f'{item_data_latest["data"][str(item_id)]["high"]:,}'
+    item_price_low = f'{item_data_latest["data"][str(item_id)]["low"]:,}'
+
+    await ctx.send(f'The price of {item_name_display} is\nHigh: {item_price_high} coins\nLow: {item_price_low} coins')
+
+
+@client.command()
+async def bossroulette(ctx, slayer_level=99):
+    boss_name, boss_link = osrs_boss_ids.get_random_boss(slayer_level)
+    await ctx.send(f'{boss_name}\n{boss_link}')
+
+
+client.run(local_secrets.DISCORD_KEY)
