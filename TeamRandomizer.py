@@ -343,6 +343,7 @@ async def price(ctx, *args):
     item_data_latest = requests.get(f"http://prices.runescape.wiki/api/v1/osrs/latest?id={item_id}", headers=user_agent).json()
     item_data_24h = requests.get(f"http://prices.runescape.wiki/api/v1/osrs/timeseries?timestep=1h&id={item_id}", headers=user_agent).json()
     
+    print(item_data_24h)
     timestamps = [datetime.fromtimestamp(x["timestamp"]) for x in item_data_24h["data"]]
     prices_high = [x["avgHighPrice"] for x in item_data_24h["data"]]
     prices_low = [x["avgLowPrice"] for x in item_data_24h["data"]]
